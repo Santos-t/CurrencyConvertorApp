@@ -1,0 +1,11 @@
+README of the CurrencyConvertorApp project
+
+This app was created for an internship case study.
+The goal of this app is to convert an amount of a currency
+into the correct value of an other currency.
+
+Just type the amount you want to convert in the left box
+or the right box and the conversion will do itself.
+You can select the currency you want to use for each side
+individually and you can also switch the currencies between
+themselves by touching the "Switch" button.

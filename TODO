@@ -1,0 +1,11 @@
+TODO of the CurrencyConvertorApp project
+
+Base:
+    Input box at the left                   [DONE] 
+    Select the currency with a slider       [DONE]
+    Conversion from a currency to an other  [DONE]
+    
+Bonus:
+    About page                              [DONE]
+    Switch between curencies                [DONE]
+    Conversion while writting the amount    [DONE]

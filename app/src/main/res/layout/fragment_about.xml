@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/textviewdev"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Developer:"
+            android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Title"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="- Théo Santos"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_about"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:layout_marginTop="80dp"
+            />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/bidmotion"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="19dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:src="@drawable/bidmotion" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="19dp"
+        android:layout_marginRight="19dp"
+        android:layout_weight="0.72"
+        android:text="Made for BidMotion"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:layout_alignBottom="@+id/bidmotion"
+        android:layout_toLeftOf="@+id/bidmotion"
+        android:layout_toStartOf="@+id/bidmotion" />
+
+
+</RelativeLayout>

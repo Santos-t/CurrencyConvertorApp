@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">CurrencyConvertorApp</string>
+    <string name="text_about">This app was developed as part as an internship case study. CurrencyConvectorApp is a mobile application to convert an amout of a currency into the correct amount of an other currency.</string>
+    <string-array name="currencies_name">
+        <item>DOLLAR</item>
+        <item>EURO</item>
+        <item>POUND</item>
+        <item>YEN</item>
+        <item>YUAN</item>
+        <item>KRONA</item>
+        <item>ROUBLE</item>
+        <item>PESO</item>
+    </string-array>
+
+    <string-array name="currencies_value">
+        <item>1.0</item>
+        <item>0.8472</item>
+        <item>1.2787</item>
+        <item>109.1790</item>
+        <item>6.6614</item>
+        <item>8.0594</item>
+        <item>59.0076</item>
+        <item>17.6797</item>
+    </string-array>
+
+</resources>
