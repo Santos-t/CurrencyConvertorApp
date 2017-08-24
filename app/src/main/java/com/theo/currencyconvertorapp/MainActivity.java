@@ -35,9 +35,6 @@ public class MainActivity extends AppCompatActivity {
         app_input = false;
         about = false;
 
-        final FragmentManager fragmentManager = getSupportFragmentManager();
-        final FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-
         spinnerl = (Spinner)findViewById(R.id.spinnerLeft);
         spinnerl.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -50,7 +47,6 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onNothingSelected(AdapterView<?> parentView) {
-                // your code here
             }
 
         });
@@ -66,7 +62,6 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onNothingSelected(AdapterView<?> parentView) {
-                // your code here
             }
 
         });
@@ -201,7 +196,6 @@ public class MainActivity extends AppCompatActivity {
                 about = true;
                 Intent i = new Intent(getApplicationContext(), AboutActivity.class);
                 startActivity(i);
-                //setContentView(R.layout.fragment_about);
                 return true;
 
             default:

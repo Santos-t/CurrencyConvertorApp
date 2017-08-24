@@ -12,7 +12,7 @@ public class AboutActivity extends AppCompatActivity {
         setContentView(R.layout.fragment_about);
         setTitle("About");
     }
-    
+
     @Override
     public void onBackPressed() {
         Intent i = new Intent(getApplicationContext(), MainActivity.class);
