@@ -1,5 +1,8 @@
 package com.theo.currencyconvertorapp;
 
+import android.content.Intent;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
@@ -8,6 +11,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -31,8 +35,41 @@ public class MainActivity extends AppCompatActivity {
         app_input = false;
         about = false;
 
+        final FragmentManager fragmentManager = getSupportFragmentManager();
+        final FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
         spinnerl = (Spinner)findViewById(R.id.spinnerLeft);
+        spinnerl.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                if (app_input)
+                    app_input = false;
+                else
+                    convert_left();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parentView) {
+                // your code here
+            }
+
+        });
         spinnerr = (Spinner)findViewById(R.id.spinnerRight);
+        spinnerr.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                if (app_input)
+                    app_input = false;
+                else
+                    convert_left();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parentView) {
+                // your code here
+            }
+
+        });
 
         box_left = (EditText)findViewById(R.id.inputBoxLeft);
         box_left.addTextChangedListener(new TextWatcher() {
@@ -96,10 +133,17 @@ public class MainActivity extends AppCompatActivity {
         String[] values = getResources().getStringArray(R.array.currencies_value);
 
         double amount = Double.parseDouble(box_left.getText().toString());
+        if (left_id == right_id)
+        {
+            app_input = true;
+            box_right.setText(Double.toString(amount));
+            return;
+        }
+
         double left_value = Double.parseDouble(values[(int)left_id]);
         double right_value = Double.parseDouble(values[(int)right_id]);
 
-        double result = amount * left_value / right_value;
+        double result = amount / left_value * right_value;
         app_input = true;
         box_right.setText(Double.toString(result));
     }
@@ -116,13 +160,20 @@ public class MainActivity extends AppCompatActivity {
 
         long left_id = spinnerl.getSelectedItemId();
         long right_id = spinnerr.getSelectedItemId();
-        String[] values = getResources().getStringArray(R.array.currencies_value);
 
         double amount = Double.parseDouble(box_right.getText().toString());
+        if (left_id == right_id)
+        {
+            app_input = true;
+            box_left.setText(Double.toString(amount));
+            return;
+        }
+        String[] values = getResources().getStringArray(R.array.currencies_value);
+
         double left_value = Double.parseDouble(values[(int)left_id]);
         double right_value = Double.parseDouble(values[(int)right_id]);
 
-        double result = amount * right_value / left_value;
+        double result = amount / right_value * left_value;
         app_input = true;
         box_left.setText(Double.toString(result));
     }
@@ -148,7 +199,9 @@ public class MainActivity extends AppCompatActivity {
         {
             case R.id.about:
                 about = true;
-                setContentView(R.layout.fragment_about);
+                Intent i = new Intent(getApplicationContext(), AboutActivity.class);
+                startActivity(i);
+                //setContentView(R.layout.fragment_about);
                 return true;
 
             default:
@@ -158,15 +211,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        if (about)
-        {
-            setContentView(R.layout.activity_main);
-            about = false;
-        }
-        else
-            super.onBackPressed();
-
+        finish();
     }
-
 
 }
