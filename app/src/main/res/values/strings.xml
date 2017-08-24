@@ -2,25 +2,36 @@
     <string name="app_name">CurrencyConvertorApp</string>
     <string name="text_about">This app was developed as part of an internship case study. CurrencyConvectorApp is a mobile application used to convert an amount of a currency into the correct amount of an other currency.</string>
     <string-array name="currencies_name">
-        <item>DOLLAR</item>
-        <item>EURO</item>
-        <item>POUND</item>
-        <item>YEN</item>
-        <item>YUAN</item>
-        <item>KRONA</item>
-        <item>ROUBLE</item>
-        <item>PESO</item>
-    </string-array>
-
-    <string-array name="currencies_value">
-        <item>1.0</item>
-        <item>0.8472</item>
-        <item>0.7813</item>
-        <item>109.1790</item>
-        <item>6.6614</item>
-        <item>8.0594</item>
-        <item>59.0076</item>
-        <item>17.6797</item>
+        <item>EUR</item>
+        <item>AUD</item>
+        <item>BGN</item>
+        <item>BRL</item>
+        <item>CAD</item>
+        <item>CHF</item>
+        <item>CYP</item>
+        <item>CZK</item>
+        <item>DKK</item>
+        <item>EEK</item>
+        <item>GBP</item>
+        <item>HKD</item>
+        <item>HUF</item>
+        <item>ISK</item>
+        <item>JPY</item>
+        <item>KRW</item>
+        <item>LTL</item>
+        <item>LVL</item>
+        <item>MTL</item>
+        <item>NOK</item>
+        <item>NZD</item>
+        <item>PLN</item>
+        <item>ROL</item>
+        <item>SEK</item>
+        <item>SGD</item>
+        <item>SIT</item>
+        <item>SKK</item>
+        <item>TRL</item>
+        <item>USD</item>
+        <item>ZAR</item>
     </string-array>
 
 </resources>

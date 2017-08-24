@@ -1,8 +1,7 @@
 package com.theo.currencyconvertorapp;
 
 import android.content.Intent;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
@@ -14,8 +13,19 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.CalendarView;
 import android.widget.EditText;
 import android.widget.Spinner;
+
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+import com.google.gson.Gson;
+
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -26,14 +36,13 @@ public class MainActivity extends AppCompatActivity {
     private Button switch_button;
     //Boolean used in order to know if the change of the box was made by the app or by the user
     private boolean app_input;
-    private boolean about;
+    private CurrencyRates rates;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         app_input = false;
-        about = false;
 
         spinnerl = (Spinner)findViewById(R.id.spinnerLeft);
         spinnerl.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -105,12 +114,18 @@ public class MainActivity extends AppCompatActivity {
                 convert_left();
             }
         });
+        CalendarView calendar = (CalendarView)findViewById(R.id.calendarView);
+        calendar.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
+            @Override
+            public void onSelectedDayChange(@NonNull CalendarView view, int year, int month, int dayOfMonth) {
 
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-                R.array.currencies_name, android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinnerl.setAdapter(adapter);
-        spinnerr.setAdapter(adapter);
+                String m = month < 10 ? "0" + month : "" + month;
+                String d = dayOfMonth < 10 ? "0" + dayOfMonth : "" + dayOfMonth;
+                getRates(""+ year + "-" + m + "-" + d);
+                convert_left();
+            }
+        });
+        getRates("latest");
     }
 
     //Convert the amount when the left box is changed
@@ -125,7 +140,6 @@ public class MainActivity extends AppCompatActivity {
 
         long left_id = spinnerl.getSelectedItemId();
         long right_id = spinnerr.getSelectedItemId();
-        String[] values = getResources().getStringArray(R.array.currencies_value);
 
         double amount = Double.parseDouble(box_left.getText().toString());
         if (left_id == right_id)
@@ -135,8 +149,9 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
 
-        double left_value = Double.parseDouble(values[(int)left_id]);
-        double right_value = Double.parseDouble(values[(int)right_id]);
+
+        double left_value = left_id == 0 ? 1.0 : rates.rates.get(spinnerl.getSelectedItem().toString());
+        double right_value = right_id == 0 ? 1.0 : rates.rates.get(spinnerr.getSelectedItem().toString());
 
         double result = amount / left_value * right_value;
         app_input = true;
@@ -163,10 +178,10 @@ public class MainActivity extends AppCompatActivity {
             box_left.setText(Double.toString(amount));
             return;
         }
-        String[] values = getResources().getStringArray(R.array.currencies_value);
 
-        double left_value = Double.parseDouble(values[(int)left_id]);
-        double right_value = Double.parseDouble(values[(int)right_id]);
+
+        double left_value = left_id == 0 ? 1.0 : rates.rates.get(spinnerl.getSelectedItem().toString());
+        double right_value = right_id == 0 ? 1.0 : rates.rates.get(spinnerr.getSelectedItem().toString());
 
         double result = amount / right_value * left_value;
         app_input = true;
@@ -193,9 +208,9 @@ public class MainActivity extends AppCompatActivity {
         switch (item.getItemId())
         {
             case R.id.about:
-                about = true;
                 Intent i = new Intent(getApplicationContext(), AboutActivity.class);
                 startActivity(i);
+                finish();
                 return true;
 
             default:
@@ -203,9 +218,47 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    @Override
-    public void onBackPressed() {
-        finish();
+
+    public void getRates(String date)
+    {
+        RequestQueue queue = Volley.newRequestQueue(this);
+        String url ="http://api.fixer.io/" + date;
+
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        // Display the first 500 characters of the response string.
+                        Gson g = new Gson();
+                        CurrencyRates rates = g.fromJson(response, CurrencyRates.class);
+                        setRates(rates);
+                    }
+                }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                System.out.print(error);
+            }
+        });
+        queue.add(stringRequest);
     }
+
+    public void setRates(CurrencyRates rates)
+    {
+        String[] items = new String[rates.rates.keySet().size() + 1];
+        int i = 1;
+        items[0] = "EUR";
+        for (String s : rates.rates.keySet())
+        {
+            items[i++] = s;
+            System.out.println(s);
+        }
+        ArrayAdapter<String> adapter = new ArrayAdapter(this,android.R.layout.simple_spinner_item, items);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinnerl.setAdapter(adapter);
+        spinnerr.setAdapter(adapter);
+        this.rates = rates;
+    }
+
+
 
 }

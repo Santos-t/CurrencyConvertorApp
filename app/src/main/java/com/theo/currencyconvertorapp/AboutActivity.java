@@ -17,6 +17,7 @@ public class AboutActivity extends AppCompatActivity {
     public void onBackPressed() {
         Intent i = new Intent(getApplicationContext(), MainActivity.class);
         startActivity(i);
+        finish();
     }
 }
 
