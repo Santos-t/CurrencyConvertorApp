@@ -1,0 +1,4 @@
+#Sat Aug 26 15:28:31 CEST 2017
+base.0=/home/theo/Projects/CurrencyConvertorApp/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main
+renamed.0=classes.dex
+file.0=/home/theo/Projects/CurrencyConvertorApp/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex

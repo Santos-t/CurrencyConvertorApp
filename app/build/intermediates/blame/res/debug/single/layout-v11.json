@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "/home/theo/Projects/CurrencyConvertorApp/app/build/intermediates/res/merged/debug/layout-v11/notification_template_big_media_custom.xml",
+        "source": "/home/theo/.android/build-cache/5e91949e2db588bcb89171ddf8daa9530fe6634d/output/res/layout-v11/notification_template_big_media_custom.xml"
+    },
+    {
+        "merged": "/home/theo/Projects/CurrencyConvertorApp/app/build/intermediates/res/merged/debug/layout-v11/notification_media_action.xml",
+        "source": "/home/theo/.android/build-cache/5e91949e2db588bcb89171ddf8daa9530fe6634d/output/res/layout-v11/notification_media_action.xml"
+    },
+    {
+        "merged": "/home/theo/Projects/CurrencyConvertorApp/app/build/intermediates/res/merged/debug/layout-v11/notification_template_big_media_narrow.xml",
+        "source": "/home/theo/.android/build-cache/5e91949e2db588bcb89171ddf8daa9530fe6634d/output/res/layout-v11/notification_template_big_media_narrow.xml"
+    },
+    {
+        "merged": "/home/theo/Projects/CurrencyConvertorApp/app/build/intermediates/res/merged/debug/layout-v11/notification_media_cancel_action.xml",
+        "source": "/home/theo/.android/build-cache/5e91949e2db588bcb89171ddf8daa9530fe6634d/output/res/layout-v11/notification_media_cancel_action.xml"
+    },
+    {
+        "merged": "/home/theo/Projects/CurrencyConvertorApp/app/build/intermediates/res/merged/debug/layout-v11/notification_template_big_media.xml",
+        "source": "/home/theo/.android/build-cache/5e91949e2db588bcb89171ddf8daa9530fe6634d/output/res/layout-v11/notification_template_big_media.xml"
+    },
+    {
+        "merged": "/home/theo/Projects/CurrencyConvertorApp/app/build/intermediates/res/merged/debug/layout-v11/notification_template_big_media_narrow_custom.xml",
+        "source": "/home/theo/.android/build-cache/5e91949e2db588bcb89171ddf8daa9530fe6634d/output/res/layout-v11/notification_template_big_media_narrow_custom.xml"
+    }
+]

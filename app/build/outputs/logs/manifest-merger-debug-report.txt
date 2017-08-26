@@ -1,0 +1,101 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/theo/Projects/CurrencyConvertorApp/app/src/main/AndroidManifest.xml:2:1-25:12
+	package
+		ADDED from /home/theo/Projects/CurrencyConvertorApp/app/src/main/AndroidManifest.xml:3:5-44
+		INJECTED from /home/theo/Projects/CurrencyConvertorApp/app/src/main/AndroidManifest.xml
+		INJECTED from /home/theo/Projects/CurrencyConvertorApp/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /home/theo/Projects/CurrencyConvertorApp/app/src/main/AndroidManifest.xml
+		INJECTED from /home/theo/Projects/CurrencyConvertorApp/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/theo/Projects/CurrencyConvertorApp/app/src/main/AndroidManifest.xml:2:11-69
+	android:versionCode
+		INJECTED from /home/theo/Projects/CurrencyConvertorApp/app/src/main/AndroidManifest.xml
+		INJECTED from /home/theo/Projects/CurrencyConvertorApp/app/src/main/AndroidManifest.xml
+application
+ADDED from /home/theo/Projects/CurrencyConvertorApp/app/src/main/AndroidManifest.xml:5:5-20:19
+MERGED from [com.android.support:appcompat-v7:25.3.1] /home/theo/.android/build-cache/5e91949e2db588bcb89171ddf8daa9530fe6634d/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-v4:25.3.1] /home/theo/.android/build-cache/5e1576e174655c534002a8d04d11d0281c61b7f1/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:25.3.1] /home/theo/.android/build-cache/c7ae0ebdafbfc13f86bcd7a02efb20e80da709a9/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:25.3.1] /home/theo/.android/build-cache/77a9e90274a99cb290c4dc2ee5527116fbc17e6a/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:25.3.1] /home/theo/.android/build-cache/06a83e1447e2728b176b349fc9155ff5f8147f2b/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:25.3.1] /home/theo/.android/build-cache/531b56b3e8823634764679cc753d359143bba2f8/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /home/theo/.android/build-cache/986fa17e45b7b69e2e208e295efcc6012d3704fc/output/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /home/theo/.android/build-cache/81dcc119591f7b189891e8063a682c2a26d1f1d3/output/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-compat:25.3.1] /home/theo/.android/build-cache/d862acbd50bc8f077565e2d6b16f2d806d630d2b/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /home/theo/.android/build-cache/3464e0e704c1ee511a8671451edd8b406ce10c03/output/AndroidManifest.xml:9:5-20
+MERGED from [com.android.volley:volley:1.0.0] /home/theo/.android/build-cache/159fcb095e3b81f21ff712cfc5e74d99a225dfe2/output/AndroidManifest.xml:9:5-20
+	android:label
+		ADDED from /home/theo/Projects/CurrencyConvertorApp/app/src/main/AndroidManifest.xml:8:9-41
+	android:supportsRtl
+		ADDED from /home/theo/Projects/CurrencyConvertorApp/app/src/main/AndroidManifest.xml:10:9-35
+	android:roundIcon
+		ADDED from /home/theo/Projects/CurrencyConvertorApp/app/src/main/AndroidManifest.xml:9:9-54
+	android:allowBackup
+		ADDED from /home/theo/Projects/CurrencyConvertorApp/app/src/main/AndroidManifest.xml:6:9-35
+	android:icon
+		ADDED from /home/theo/Projects/CurrencyConvertorApp/app/src/main/AndroidManifest.xml:7:9-43
+	android:theme
+		ADDED from /home/theo/Projects/CurrencyConvertorApp/app/src/main/AndroidManifest.xml:11:9-40
+activity#com.theo.currencyconvertorapp.MainActivity
+ADDED from /home/theo/Projects/CurrencyConvertorApp/app/src/main/AndroidManifest.xml:12:9-18:20
+	android:name
+		ADDED from /home/theo/Projects/CurrencyConvertorApp/app/src/main/AndroidManifest.xml:12:19-47
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from /home/theo/Projects/CurrencyConvertorApp/app/src/main/AndroidManifest.xml:13:13-17:29
+action#android.intent.action.MAIN
+ADDED from /home/theo/Projects/CurrencyConvertorApp/app/src/main/AndroidManifest.xml:14:17-69
+	android:name
+		ADDED from /home/theo/Projects/CurrencyConvertorApp/app/src/main/AndroidManifest.xml:14:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /home/theo/Projects/CurrencyConvertorApp/app/src/main/AndroidManifest.xml:16:17-77
+	android:name
+		ADDED from /home/theo/Projects/CurrencyConvertorApp/app/src/main/AndroidManifest.xml:16:27-74
+activity#com.theo.currencyconvertorapp.AboutActivity
+ADDED from /home/theo/Projects/CurrencyConvertorApp/app/src/main/AndroidManifest.xml:19:9-60
+	android:name
+		ADDED from /home/theo/Projects/CurrencyConvertorApp/app/src/main/AndroidManifest.xml:19:19-48
+uses-permission#android.permission.INTERNET
+ADDED from /home/theo/Projects/CurrencyConvertorApp/app/src/main/AndroidManifest.xml:21:5-66
+	android:name
+		ADDED from /home/theo/Projects/CurrencyConvertorApp/app/src/main/AndroidManifest.xml:21:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from /home/theo/Projects/CurrencyConvertorApp/app/src/main/AndroidManifest.xml:22:5-79
+	android:name
+		ADDED from /home/theo/Projects/CurrencyConvertorApp/app/src/main/AndroidManifest.xml:22:22-76
+uses-sdk
+INJECTED from /home/theo/Projects/CurrencyConvertorApp/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support:appcompat-v7:25.3.1] /home/theo/.android/build-cache/5e91949e2db588bcb89171ddf8daa9530fe6634d/output/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:support-v4:25.3.1] /home/theo/.android/build-cache/5e1576e174655c534002a8d04d11d0281c61b7f1/output/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:25.3.1] /home/theo/.android/build-cache/c7ae0ebdafbfc13f86bcd7a02efb20e80da709a9/output/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.3.1] /home/theo/.android/build-cache/77a9e90274a99cb290c4dc2ee5527116fbc17e6a/output/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-ui:25.3.1] /home/theo/.android/build-cache/06a83e1447e2728b176b349fc9155ff5f8147f2b/output/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:25.3.1] /home/theo/.android/build-cache/531b56b3e8823634764679cc753d359143bba2f8/output/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /home/theo/.android/build-cache/986fa17e45b7b69e2e208e295efcc6012d3704fc/output/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /home/theo/.android/build-cache/81dcc119591f7b189891e8063a682c2a26d1f1d3/output/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-compat:25.3.1] /home/theo/.android/build-cache/d862acbd50bc8f077565e2d6b16f2d806d630d2b/output/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /home/theo/.android/build-cache/3464e0e704c1ee511a8671451edd8b406ce10c03/output/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.volley:volley:1.0.0] /home/theo/.android/build-cache/159fcb095e3b81f21ff712cfc5e74d99a225dfe2/output/AndroidManifest.xml:7:5-43
+	tools:overrideLibrary
+		ADDED from [com.android.support:appcompat-v7:25.3.1] /home/theo/.android/build-cache/5e91949e2db588bcb89171ddf8daa9530fe6634d/output/AndroidManifest.xml:23:9-75
+	android:targetSdkVersion
+		INJECTED from /home/theo/Projects/CurrencyConvertorApp/app/src/main/AndroidManifest.xml
+		INJECTED from /home/theo/Projects/CurrencyConvertorApp/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /home/theo/Projects/CurrencyConvertorApp/app/src/main/AndroidManifest.xml
+		INJECTED from /home/theo/Projects/CurrencyConvertorApp/app/src/main/AndroidManifest.xml
+meta-data#android.support.VERSION
+ADDED from [com.android.support:appcompat-v7:25.3.1] /home/theo/.android/build-cache/5e91949e2db588bcb89171ddf8daa9530fe6634d/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-v4:25.3.1] /home/theo/.android/build-cache/5e1576e174655c534002a8d04d11d0281c61b7f1/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-fragment:25.3.1] /home/theo/.android/build-cache/c7ae0ebdafbfc13f86bcd7a02efb20e80da709a9/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-media-compat:25.3.1] /home/theo/.android/build-cache/77a9e90274a99cb290c4dc2ee5527116fbc17e6a/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-ui:25.3.1] /home/theo/.android/build-cache/06a83e1447e2728b176b349fc9155ff5f8147f2b/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-utils:25.3.1] /home/theo/.android/build-cache/531b56b3e8823634764679cc753d359143bba2f8/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /home/theo/.android/build-cache/986fa17e45b7b69e2e208e295efcc6012d3704fc/output/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /home/theo/.android/build-cache/81dcc119591f7b189891e8063a682c2a26d1f1d3/output/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-compat:25.3.1] /home/theo/.android/build-cache/d862acbd50bc8f077565e2d6b16f2d806d630d2b/output/AndroidManifest.xml:25:5-27:34
+	android:value
+		ADDED from [com.android.support:appcompat-v7:25.3.1] /home/theo/.android/build-cache/5e91949e2db588bcb89171ddf8daa9530fe6634d/output/AndroidManifest.xml:27:9-31
+	android:name
+		ADDED from [com.android.support:appcompat-v7:25.3.1] /home/theo/.android/build-cache/5e91949e2db588bcb89171ddf8daa9530fe6634d/output/AndroidManifest.xml:26:9-47

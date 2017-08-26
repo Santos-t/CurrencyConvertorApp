@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/home/theo/Projects/CurrencyConvertorApp/app/build/intermediates/res/merged/debug/mipmap-xxhdpi/ic_launcher_round.png",
+        "source": "/home/theo/Projects/CurrencyConvertorApp/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/home/theo/Projects/CurrencyConvertorApp/app/build/intermediates/res/merged/debug/mipmap-xxhdpi/ic_launcher.png",
+        "source": "/home/theo/Projects/CurrencyConvertorApp/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
+    }
+]
